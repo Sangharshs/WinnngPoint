@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Scratch &amp; Win</string>
+    <string name="your_coins">Your Coins</string>
+    <string name="congratulation">Congratulation</string>
+
+    <string name="play_store_link">https://play.google.com/store/apps/details?id=</string>
+    <string name="minimum_coins_limit_6000">Minimum Coins Limit 6000</string>
+
+<!--    &lt;!&ndash;  FB ADS UNIT PERSONAL &ndash;&gt;-->
+<!--    <string name="native_ad_fb">362161925035368_382570622994498</string>-->
+<!--    <string name="rewarded_video_ad">362161925035368_384614806123413</string>-->
+
+<!--      FB ADS UNIT CLIENT -->
+    <string name="native_ad_fb">446393033182423_446394886515571</string>
+    <string name="rewarded_video_ad">446393033182423_446394026515657</string>
+
+</resources>

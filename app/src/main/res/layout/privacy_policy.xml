@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressforprivacy"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cancel"
+            android:backgroundTint="@color/white"
+            android:layout_width="100dp"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/accept"
+            android:layout_marginStart="60dp"
+            android:layout_gravity="left"
+            android:layout_width="100dp"
+            android:text="Accept"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

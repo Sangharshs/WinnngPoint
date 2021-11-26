@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".WithdrawActivity">
+
+    <TextView
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="10sp"
+        android:gravity="center"
+        android:id="@+id/coinsLimit"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:text="@string/minimum_coins_limit_6000"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:text="आपका पैसा 23 दिन के बाद आपके खाते में भेजा जाएगा कृपया प्रतीक्षा करे। Thanks"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="40dp">
+        <RadioGroup
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <RadioButton
+                android:textColor="@android:color/black"
+                android:id="@+id/radio_paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paytm"
+                android:checked="true" />
+
+
+            <RadioButton
+                android:textColor="@android:color/black"
+                android:layout_marginStart="20sp"
+                android:id="@+id/radio_google_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Pay" />
+        </RadioGroup>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paytmView"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Enter Your Paytm Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:background="@drawable/ptm"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"/>
+
+        <EditText
+            android:id="@+id/paytm_editText"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColorHint="@android:color/black"
+            android:hint="Enter Your Paytm Number"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="" />
+
+        <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/submit_paytm"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#FFC107"
+            android:layout_width="140dp"
+            android:layout_height="40sp">
+
+            <TextView
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/googlepayView"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Enter Your Google Pay Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:src="@drawable/gpay"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <EditText
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColorHint="@android:color/black"
+            android:hint="Enter Your Google Pay Number"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:id="@+id/g_edittext"/>
+
+        <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:id="@+id/submit_gpay"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#FFC107"
+            android:layout_width="140dp"
+            android:layout_height="40sp">
+
+            <TextView
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

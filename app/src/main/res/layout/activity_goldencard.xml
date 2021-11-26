@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:gravity="top"
+    tools:context=".GoldenScratchActivity">
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/purple_500"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_light"
+        android:text="Golden Scratch"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:text="आपके पास आज के लिए 20 स्क्रैच कार्ड हैं।"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_gravity="top|center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/golden_round">
+        <TextView
+            android:backgroundTint="@android:color/black"
+            android:background="@drawable/golden_round"
+            android:id="@+id/daily_scratch_limit"
+            android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:textSize="30sp"
+            android:text="30"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:id="@+id/c"
+        app:cardCornerRadius="10dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:id="@+id/point_Text"
+                android:layout_width="wrap_content"
+                android:text="38"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <com.anupkumarpanwar.scratchview.ScratchView
+            android:id="@+id/scratch_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_image="@drawable/bs"
+            app:tile_mode="CLAMP"
+            app:overlay_height="200dp"
+            app:overlay_width="200dp"
+            />
+    </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.facebook.ads.NativeAdLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/native_ad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
